@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Imágenes - Lab S3</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Mi Galería en S3</h1>
+    <p class="subtitulo">Laboratorio 9 · Desarrollo en la Nube · Subida segura con presigned URLs</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Subir imagen</h2>
+
+      <div id="dropZone" class="drop-zone" tabindex="0">
+        <p><strong>Arrastra una imagen aquí</strong> o haz clic para elegirla</p>
+        <p class="hint">Solo JPG, PNG o WEBP · Máximo 5 MB</p>
+        <p id="fileName" class="file-name"></p>
+      </div>
+      <input type="file" id="file" accept="image/jpeg,image/png,image/webp" hidden>
+
+      <button id="uploadBtn" disabled>Subir</button>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="panel">
+      <div class="gallery-header">
+        <h2>Galería</h2>
+        <button id="refreshBtn" class="secundario">Actualizar</button>
+      </div>
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
